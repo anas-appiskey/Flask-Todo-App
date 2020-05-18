@@ -14,6 +14,7 @@ class Todo(db.Model):
 
 db.create_all()
 
+#controller
 @app.route('/')
 def index():
     return render_template('index.html', data=Todo.query.all())
